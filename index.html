@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lewis University Esports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<div class="w3-cell-row w3-red">
+  <button onclick="myFunction()" class="w3-button w3-black">☰</button>
+    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">News</a>
+      <a href="#" class="w3-bar-item w3-button">Events</a>
+      <a href="#" class="w3-bar-item w3-button">Esport Teams</a>
+      <a href="#" class="w3-bar-item w3-button">History</a>
+      <a href="#" class="w3-bar-item w3-button">About</a>
+      <a href="#" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  <div class="w3-cell"><a href="index.html">Esports Homepage</a></div>
+  <div class="w3-cell"><a href="https://www.lewisu.edu/index.htm">Lewis University Homepage</a></div>
+</div>
+
+<div class="w3-cell-row w3-center w3-white">
+  Lewis University Gaming
+</div>
+
+<!-- Slideshow-->
+<div class="w3-content w3-display-container">
+  <div class="contain">
+    <img class="mySlides contain" src="lewisesports_wallpaper.png" style="width:100%">
+    <img class="mySlides contain" src="eSports Logo by Laura Streit.png" style="width:100%">
+  </div>
+  <img class="mySlides contain" src="lewisesports_wallpaper.png" style="width:100%">
+  <img class="mySlides contain" src="eSports Logo by Laura Streit.png" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<!-- Footer -->
+<div class="w3-cell-row w3-black">
+  <a href="" class="fa fa-facebook w3-right"></a>
+  <a href="" class="fa fa-twitter w3-right"></a>
+</div>
+
+<!-- scripts -->
+<script>
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+
+</html>
